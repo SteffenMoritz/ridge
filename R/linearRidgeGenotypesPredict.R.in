@@ -1,0 +1,53 @@
+## Linear Ridge Big Predict function (calls C)
+
+linearRidgeGenotypesPredict <- function(genotypesfilename,
+                                        betafilename,
+                                        phenotypesfilename = NULL,
+                                        verbose = FALSE)
+{
+  if(!@HAVE_GSL@)
+    stop("GSL >=1.14 is not installed, you cannot use this function")
+  ## Tilde expansion of genotypesfilename
+  ## (Because the C code cannot cope with the tilde)
+  genotypesfilename <- path.expand(genotypesfilename)
+  ## Check phenotypes file for reading
+  ## mode = 4 tests for read permission
+  if(file.access(names = genotypesfilename, mode = 4))
+    stop(gettextf("Cannot open file %s for reading", genotypesfilename))
+  ## Tilde expansion of betafilename
+  ## (Because the C code cannot cope with the tilde)
+  betafilename <- path.expand(betafilename)
+  ## Check genotypes file for reading
+  ## mode = 4 tests for read permission
+  if(file.access(names = betafilename, mode = 4))
+    stop(gettextf("Cannot open file %s for reading", betafilename))
+  ## Check beta file name is set
+  ## If it is not set it to beta.dat (print a warning)
+  if(is.null(phenotypesfilename))
+    {
+      phenotypesFileExists <- FALSE
+      phenotypesfilename <- tempfile(pattern = "beta", fileext = ".dat")
+    } else {
+      phenotypesFileExists <- TRUE
+      ## Else do the tilde expansion on betafilename
+      ## (Because the C code cannot cope with the tilde)
+      phenotypesfilename <- path.expand(phenotypesfilename)
+    }
+  res <- .C("regression_wrapper_function",
+            genofilename = as.character(genotypesfilename),
+            phenofilename = as.character(phenotypesfilename),
+            betafilename = as.character(betafilename),
+            approxfilename = as.character("NULL"),
+            permfilename = as.character("NULL"),
+            thinfilename = as.character("NULL"),
+            intercept = as.integer(1),
+            lambda = as.double(-1),
+            model = as.character("linear"),
+            predict = as.integer(1),
+            verbose = as.integer(verbose),
+            PACKAGE = "ridge")
+  y <- read.table(phenotypesfilename, colClasses = c("numeric"),  col.names = c("PredictedPhenotypes"))
+  if(!phenotypesFileExists)
+    unlink(phenotypesfilename)
+  return(y)
+}

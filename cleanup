@@ -1,0 +1,11 @@
+## Adapted from cleanup script in gsl-1.9-9
+
+#! /bin/sh
+for f in ./config.*; do
+rm -f $f
+done
+
+rm ./src/Makevars
+
+exit 0
+ 

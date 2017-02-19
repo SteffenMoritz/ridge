@@ -1,0 +1,6 @@
+## These lines are the same as those of gsl version 1.9-9
+## (although I didn't copy them from there, I had them before)
+
+PKG_CFLAGS = -I$(LIB_GSL)/include
+PKG_LIBS = -L$(LIB_GSL)/lib -lgsl -lm -lgslcblas
+

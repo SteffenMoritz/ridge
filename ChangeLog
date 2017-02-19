@@ -1,0 +1,34 @@
+2014-3-02	Erika Cule <erika.cule05@imperial.ac.uk>
+
+	* Fixed layout of .Rd files
+	* Added deletion of Makevars to cleanup script
+
+2012-9-27	Erika Cule <erika.cule05@imperial.ac.uk>
+
+	* Flat text (.txt) data files were moved from ridge/data to ridge/inst/extdata (in the source, which becomes ridge/extdata in the installed package). The .txt files 
+	should be in inst/extdata because they files are used by the package examples (albeit in not run sections), as described in Writing R Extensions 1.1.5 Data in packages.
+	* Some users were reporting problems installing the package on some Linux OS. configure has been modified to fix this 
+	problem.
+
+2012-8-21   Erika Cule <erika.cule05@imperial.ac.uk>
+
+	* Bug fix in src/commonFunctions.c
+
+2012-8-21   Erika Cule <erika.cule05@imperial.ac.uk>
+
+	* Added configure.ac so that package will install if GSL >= 1.14 is not available 
+	(with linearRidgeGenotypes, logisticRidgeGenotypes, linearRidgeGenotypesPredict and 
+	logisticRidgeGenotypesPredict disabled). 
+	* configure.ac detects whether openblas is available and if it is found, links to that. 
+	This speeds up computation. (http://xianyi.github.com/OpenBLAS/)
+	
+2012-7-19   Erika Cule <erika.cule05@imperial.ac.uk> 
+
+	Major new release
+	* fixed a bug in linearRidge when scaling = "none"
+	* added functions linearRidgeGenotypes and logisticRidgeGenotypes and their predicting counterparts linearRidgeGenotypesPredict and 
+	logisticRidgeGenotypespredict. These functions fit linear and logistic ridge regression models for genome-wide SNP data, 
+	optionally automatically choosing the ridge parameter
+	* minor bug fix: "Intercept" now prints as "(Intercept)"
+		(as is the case for lm and glm models)
+	
