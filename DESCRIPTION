@@ -1,15 +1,15 @@
 Package: ridge
-Title: Ridge Regression with automatic selection of the penalty
-        parameter
+Title: Ridge Regression with automatic selection of the penalty parameter
+Description: This package offers linear and logistic ridge regression, especially for small data sets 
+             and genome-wide SNP data.
 Version: 2.2
 Date: 2017-02-19
-Author: Erika Cule, Steffen Moritz
-Description: Linear and logistic ridge regression for small data sets
-        and genome-wide SNP data
+Author: Steffen Moritz, Erika Cule
 Maintainer: Steffen Moritz <steffen.moritz10@gmail.com>
+Type: Package
+BugReports: https://github.com/SteffenMoritz/ridge/issues
+URL: http://github.com/SteffenMoritz/ridge
+Repository: CRAN
 License: GPL-2
 SystemRequirements: Gnu Scientific Library version >= 1.14
-Packaged: 2014-03-03 21:04:48 UTC; erikacule
 NeedsCompilation: yes
-Repository: CRAN
-

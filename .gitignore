@@ -5,3 +5,9 @@
 src/*.o
 src/*.so
 src/*.dll
+/.dropbox
+/desktop.ini
+/.RData
+Icon
+
+
