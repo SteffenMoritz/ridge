@@ -577,3 +577,6 @@ gsl_vector * my_gsl_linear_fit(gsl_matrix * X,
   return beta;
 }
 #endif
+
+typedef int make_iso_compilers_happy;
+

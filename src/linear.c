@@ -522,3 +522,6 @@ int linearMain(char * genofilename,
   return 0;
 }
 #endif
+
+typedef int make_iso_compilers_happy;
+

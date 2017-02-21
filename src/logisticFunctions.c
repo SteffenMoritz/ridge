@@ -86,3 +86,6 @@ int returnToOriginalScaleLogistic(GSL_TYPE(vector) * betaOut,
 }
 
 #endif
+
+typedef int make_iso_compilers_happy;
+

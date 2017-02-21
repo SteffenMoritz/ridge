@@ -501,3 +501,6 @@ int computePermPs(GSL_TYPE(vector) * permPs,
   return 0;
 }
 #endif
+
+typedef int make_iso_compilers_happy;
+

@@ -699,3 +699,6 @@ int get_prev_variant_col(int current_pos, int number_of_columns)
   return new_pos;
 }
 #endif
+
+typedef int make_iso_compilers_happy;
+

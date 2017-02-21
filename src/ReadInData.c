@@ -848,3 +848,6 @@ int safelyFreeMatrix(GSL_TYPE(matrix) * mat)
 /*  Rprintf("\tWritten by Erika Cule 2012\n\n");  */
 /* } */
 #endif
+
+typedef int make_iso_compilers_happy;
+

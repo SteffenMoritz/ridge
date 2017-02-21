@@ -298,3 +298,5 @@ void regression_wrapper_function(char **g,
 
 #endif
 
+typedef int make_iso_compilers_happy;
+
