@@ -9,5 +9,9 @@ r_github_packages:
   - jimhester/covr
   - SteffenMoritz/ridge
 
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y gsl-bin
+
 after_success:
   - Rscript -e 'library(covr);codecov()'
