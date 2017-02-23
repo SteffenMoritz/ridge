@@ -18,6 +18,9 @@ data sets and genome-wide SNP data.
 If you found a bug or have suggestions, feel free to get in contact via 
 steffen.moritz10 at gmail.com
 
+Since I only have taken over this package (it was orphaned) - 
+it might be that I can't help with all details. 
+
 ### Version
 **2.2**
 

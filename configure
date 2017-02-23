@@ -579,11 +579,11 @@ MAKEFLAGS=
 
 # Identity of this package.
 PACKAGE_NAME='ridge'
-PACKAGE_TARNAME='ridge-2.1-2.tar.gz'
-PACKAGE_VERSION='version-2.1-2'
-PACKAGE_STRING='ridge version-2.1-2'
-PACKAGE_BUGREPORT='ejc05@imperial.ac.uk'
-PACKAGE_URL='http://cran.r-project.org/web/packages/ridge'
+PACKAGE_TARNAME='ridge-2.2.tar.gz'
+PACKAGE_VERSION='version-2.2'
+PACKAGE_STRING='ridge version-2.2'
+PACKAGE_BUGREPORT='https://github.com/SteffenMoritz/ridge/issues'
+PACKAGE_URL='https://github.com/SteffenMoritz/ridge'
 
 # Factoring default headers for most tests.
 ac_includes_default="\
@@ -3305,7 +3305,7 @@ else
        if ((sscanf(gslv, "%d.%d", &major, &minor)) != 2) {
        	  exit (1);
        }
-       exit (minor < 14);
+       exit ((minor < 14)&&(major < 2));
        #else
        exit(1);
        #endif

@@ -1,8 +1,18 @@
+useDynLib(ridge, .registration = TRUE)
+
+ importFrom("grDevices", "rainbow")
+  importFrom("graphics", "abline", "lines", "plot")
+  importFrom("stats", ".checkMFClasses", "coef", "delete.response",
+             "model.frame", "model.matrix", "model.response", "na.pass",
+             "pnorm", "printCoefmat", "terms")
+  importFrom("utils", "read.table")
+
 # functions
 export(linearRidge, logisticRidge, pvals)
 
 # functions not exported
 # export(computeLogisticRidge, objectiveFunction, updateBeta)
+
 
 # S3 methods
 S3method(coef, ridgeLinear)
@@ -30,6 +40,4 @@ export(linearRidgeGenotypes, logisticRidgeGenotypes)
 ## export functions to call C code - predicting
 export(linearRidgeGenotypesPredict, logisticRidgeGenotypesPredict)
 
-## Load the shared object library
-useDynLib(ridge)
 

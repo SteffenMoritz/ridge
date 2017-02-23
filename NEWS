@@ -2,7 +2,8 @@ Changes Version 2.3  Steffen Moritz
 
   o Made package CRAN ready again
   o Created github repository for the package
-    
+  o Fixed warning using Wpendantic gcc
+  o Adapted the DESCRIPTION file to latest CRAN requirements
   o Renamed CHANGELOG to NEWS
   o NEWS template update
 

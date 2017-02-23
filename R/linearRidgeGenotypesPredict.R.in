@@ -33,7 +33,7 @@ linearRidgeGenotypesPredict <- function(genotypesfilename,
       ## (Because the C code cannot cope with the tilde)
       phenotypesfilename <- path.expand(phenotypesfilename)
     }
-  res <- .C("regression_wrapper_function",
+  res <- .C(regression_wrapper_function,
             genofilename = as.character(genotypesfilename),
             phenofilename = as.character(phenotypesfilename),
             betafilename = as.character(betafilename),
@@ -44,8 +44,7 @@ linearRidgeGenotypesPredict <- function(genotypesfilename,
             lambda = as.double(-1),
             model = as.character("linear"),
             predict = as.integer(1),
-            verbose = as.integer(verbose),
-            PACKAGE = "ridge")
+            verbose = as.integer(verbose))
   y <- read.table(phenotypesfilename, colClasses = c("numeric"),  col.names = c("PredictedPhenotypes"))
   if(!phenotypesFileExists)
     unlink(phenotypesfilename)

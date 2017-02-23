@@ -1,7 +1,7 @@
 Package: ridge
-Title: Ridge Regression with automatic selection of the penalty parameter
-Description: This package offers linear and logistic ridge regression, especially for small data sets 
-             and genome-wide SNP data.
+Title: Ridge Regression with Automatic Selection of the Penalty Parameter
+Description: Linear and logistic ridge regression functions. Additionally includes special functions for 
+            genome-wide single-nucleotide polymorphism data.
 Version: 2.2
 Date: 2017-02-19
 Author: Steffen Moritz, Erika Cule
@@ -10,6 +10,14 @@ Type: Package
 BugReports: https://github.com/SteffenMoritz/ridge/issues
 URL: http://github.com/SteffenMoritz/ridge
 Repository: CRAN
+Depends:
+    R (>= 3.0.1)
+Imports:
+    stats,
+    graphics,
+    grDevices,
+    utils
 License: GPL-2
 SystemRequirements: Gnu Scientific Library version >= 1.14
 NeedsCompilation: yes
+RoxygenNote: 6.0.1

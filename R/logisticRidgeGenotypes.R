@@ -10,7 +10,7 @@ logisticRidgeGenotypes <- function(genotypesfilename,
                                    intercept = TRUE,
                                    verbose = FALSE)
   {
-    if(!FALSE)
+    if(!TRUE)
       stop("GSL >=1.14 is not installed, you cannot use this function")
     ## Tilde expansion of phenotypesfilename
     ## (Because the C code cannot cope with the tilde)
@@ -79,7 +79,7 @@ logisticRidgeGenotypes <- function(genotypesfilename,
         ## Therefore make it into a string
         thinfilename <- "NULL"
       }
-    res <- .C("regression_wrapper_function",
+    res <- .C(regression_wrapper_function,
               genofilename = as.character(genotypesfilename),
               phenofilename = as.character(phenotypesfilename),
               betafilename = as.character(betafilename),
@@ -90,8 +90,7 @@ logisticRidgeGenotypes <- function(genotypesfilename,
               lambda = as.double(lambda),
               model = as.character("logistic"),
               predict = as.integer(0),
-              verbose = as.integer(verbose),
-              PACKAGE = "ridge")
+              verbose = as.integer(verbose))
     beta <- read.table(betafilename, row.names = 1, colClasses = c("character", "numeric"), col.names = c("", "B"))
     if(!betaFileExists)
       unlink(betafilename)

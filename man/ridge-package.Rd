@@ -1,10 +1,7 @@
+\docType{package}
 \name{ridge-package}
 \alias{ridge-package}
-\alias{ridge}
-\docType{package}
-\title{
-ridge package
-}
+\title{ridge-package description}
 \description{
 R package for fitting linear and logistic ridge regression models.
 }
@@ -15,10 +12,8 @@ ridge regression models for genome-wide SNP data supplied as file names
 when the data are too big to read into R.
 
 For a complete
-list of functions, use \code{library(help="ridge")}.
-
+list of functions, use \code{help(package="ridge")}.
 }
 \author{
-Erika Cule
+Steffen Moritz, Erika Cule
 }
-\keyword{ package }

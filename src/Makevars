@@ -1,0 +1,10 @@
+# Kindly supplied by Dirk Eddelbuettel
+# set by configure
+GSL_CFLAGS = -I/usr/local/Cellar/gsl/2.3/include
+GSL_LIBS   = -L/usr/local/Cellar/gsl/2.3/lib -lgsl -lgslcblas
+
+# combine to standard arguments for R
+PKG_CPPFLAGS = $(GSL_CFLAGS) -I.
+PKG_LIBS     = $(GSL_LIBS)
+
+

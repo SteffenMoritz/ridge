@@ -158,3 +158,6 @@ int prepareLambdas(gsl_vector * y,
 /* } */
 
 #endif
+
+typedef int make_iso_compilers_happy;
+

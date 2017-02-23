@@ -393,7 +393,7 @@ on `(hostname || uname -n) 2>/dev/null | sed 1q`
 "
 
 # Files that config.status was made for.
-config_files=" R/l*Genotypes*.R"
+config_files=" R/l*Genotypes*.R src/Makevars"
 config_headers=" src/config.h"
 
 ac_cs_usage="\
@@ -537,6 +537,7 @@ do
   case $ac_config_target in
     "src/config.h") CONFIG_HEADERS="$CONFIG_HEADERS src/config.h" ;;
     "R/l*Genotypes*.R") CONFIG_FILES="$CONFIG_FILES R/l*Genotypes*.R" ;;
+    "src/Makevars") CONFIG_FILES="$CONFIG_FILES src/Makevars" ;;
 
   *) as_fn_error $? "invalid argument: \`$ac_config_target'" "$LINENO" 5;;
   esac
@@ -601,22 +602,22 @@ fi
 
 echo 'BEGIN {' >"$ac_tmp/subs1.awk" &&
 cat >>"$ac_tmp/subs1.awk" <<\_ACAWK &&
-S["GSL_LIBS"]=""
-S["GSL_CFLAGS"]=""
+S["GSL_LIBS"]="-L/usr/local/Cellar/gsl/2.3/lib -lgsl -lgslcblas"
+S["GSL_CFLAGS"]="-I/usr/local/Cellar/gsl/2.3/include"
 S["LTLIBOBJS"]=""
 S["LIBOBJS"]=""
-S["HAVE_GSL"]="FALSE"
-S["EGREP"]=""
-S["GREP"]=""
-S["CPP"]=""
-S["OBJEXT"]=""
+S["HAVE_GSL"]="TRUE"
+S["EGREP"]="/usr/bin/grep -E"
+S["GREP"]="/usr/bin/grep"
+S["CPP"]="gcc -E"
+S["OBJEXT"]="o"
 S["EXEEXT"]=""
-S["ac_ct_CC"]=""
+S["ac_ct_CC"]="gcc"
 S["CPPFLAGS"]=""
 S["LDFLAGS"]=""
-S["CFLAGS"]=""
-S["CC"]=""
-S["GSL_CONFIG"]=""
+S["CFLAGS"]="-g -O2"
+S["CC"]="gcc"
+S["GSL_CONFIG"]="/usr/local/bin/gsl-config"
 S["target_alias"]=""
 S["host_alias"]=""
 S["build_alias"]=""
@@ -647,11 +648,11 @@ S["bindir"]="${exec_prefix}/bin"
 S["program_transform_name"]="s,x,x,"
 S["prefix"]="/usr/local"
 S["exec_prefix"]="${prefix}"
-S["PACKAGE_URL"]="http://cran.r-project.org/web/packages/ridge"
-S["PACKAGE_BUGREPORT"]="ejc05@imperial.ac.uk"
-S["PACKAGE_STRING"]="ridge version-2.1-2"
-S["PACKAGE_VERSION"]="version-2.1-2"
-S["PACKAGE_TARNAME"]="ridge-2.1-2.tar.gz"
+S["PACKAGE_URL"]="https://github.com/SteffenMoritz/ridge"
+S["PACKAGE_BUGREPORT"]="https://github.com/SteffenMoritz/ridge/issues"
+S["PACKAGE_STRING"]="ridge version-2.2"
+S["PACKAGE_VERSION"]="version-2.2"
+S["PACKAGE_TARNAME"]="ridge-2.2.tar.gz"
 S["PACKAGE_NAME"]="ridge"
 S["PATH_SEPARATOR"]=":"
 S["SHELL"]="/bin/sh"
@@ -697,11 +698,23 @@ if test -n "$CONFIG_HEADERS"; then
 cat >"$ac_tmp/defines.awk" <<\_ACAWK ||
 BEGIN {
 D["PACKAGE_NAME"]=" \"ridge\""
-D["PACKAGE_TARNAME"]=" \"ridge-2.1-2.tar.gz\""
-D["PACKAGE_VERSION"]=" \"version-2.1-2\""
-D["PACKAGE_STRING"]=" \"ridge version-2.1-2\""
-D["PACKAGE_BUGREPORT"]=" \"ejc05@imperial.ac.uk\""
-D["PACKAGE_URL"]=" \"http://cran.r-project.org/web/packages/ridge\""
+D["PACKAGE_TARNAME"]=" \"ridge-2.2.tar.gz\""
+D["PACKAGE_VERSION"]=" \"version-2.2\""
+D["PACKAGE_STRING"]=" \"ridge version-2.2\""
+D["PACKAGE_BUGREPORT"]=" \"https://github.com/SteffenMoritz/ridge/issues\""
+D["PACKAGE_URL"]=" \"https://github.com/SteffenMoritz/ridge\""
+D["STDC_HEADERS"]=" 1"
+D["HAVE_SYS_TYPES_H"]=" 1"
+D["HAVE_SYS_STAT_H"]=" 1"
+D["HAVE_STDLIB_H"]=" 1"
+D["HAVE_STRING_H"]=" 1"
+D["HAVE_MEMORY_H"]=" 1"
+D["HAVE_STRINGS_H"]=" 1"
+D["HAVE_INTTYPES_H"]=" 1"
+D["HAVE_STDINT_H"]=" 1"
+D["HAVE_UNISTD_H"]=" 1"
+D["HAVE_GSL_GSL_VERSION_H"]=" 1"
+D["HAVE_GSL_HEADER"]=" 1"
   for (key in D) D_is_set[key] = 1
   FS = ""
 }
