@@ -1,7 +1,7 @@
 Package: ridge
 Title: Ridge Regression with Automatic Selection of the Penalty Parameter
 Description: Linear and logistic ridge regression functions. Additionally includes special functions for 
-            genome-wide single-nucleotide polymorphism data.
+            genome-wide single-nucleotide polymorphism (SNP) data.
 Version: 2.2
 Date: 2017-02-19
 Author: Steffen Moritz, Erika Cule

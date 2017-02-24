@@ -1,6 +1,12 @@
 The ridge package requires GNU Scientific Library (GSL) to be installed on your system.
 
-Installing gsl from source requires you to download and install GSL
-first.  
+Installing gsl from source requires you to download and install GSL first. 
 
-For Ubuntu it might be possible to go to the Software Center and install "GNU Scientific Library (GSL) -- development package"
+Linux : 
+sudo apt-get install -y libgsl0-dev
+
+Mac:
+brew install gsl
+
+For Ubuntu it might also be possible to go to the Software Center and install 
+"GNU Scientific Library (GSL) -- development package"

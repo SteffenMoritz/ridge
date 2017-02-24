@@ -19,6 +19,9 @@ steffen.moritz10 at gmail.com
 Since I only have taken over this package (it was orphaned) - 
 it might be that I can't help with all details. 
 
+Be aware, that therefore I also can not guarantee 
+to 100% that everything works as expected.
+
 ### Version
 **2.2**
 
