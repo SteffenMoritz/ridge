@@ -1,7 +1,5 @@
 [![Maintenance](https://img.shields.io/badge/maintenance-active-brightgreen.svg)](https://github.com/SteffenMoritz/ridge/issues)
 [![Build Status](https://travis-ci.org/SteffenMoritz/ridge.svg?branch=master)](https://travis-ci.org/SteffenMoritz/ridge)
-[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/steffenmoritz/ridge?branch=master&svg=true)](https://ci.appveyor.com/project/steffenmoritz/ridge)
-[![codecov](https://codecov.io/gh/SteffenMoritz/ridge/branch/master/graph/badge.svg)](https://codecov.io/gh/SteffenMoritz/ridge)
 [![CRAN Version](http://www.r-pkg.org/badges/version/ridge)](https://cran.r-project.org/package=ridge)
 [![License](https://img.shields.io/badge/License-GPL--2-blue.svg
 )](https://github.com/SteffenMoritz/imputeTS/blob/master/LICENSE.txt)
