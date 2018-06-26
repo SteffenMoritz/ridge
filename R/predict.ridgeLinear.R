@@ -29,9 +29,9 @@ predict.ridgeLinear <- function(object, newdata,
     hasintercept <- attr(tt, "intercept")
     ll <- attr(tt, "term.labels")
     if(hasintercept)
-      mm <- cbind(1, X[,ll])
+      mm <- cbind(1, X[,ll,drop=FALSE])
     else
-      mm <- X[,ll]
+      mm <- X[,ll,drop=FALSE]
     beta <- coef(object, all.coef = all.coef)
     if(all.coef)
       res <- apply(beta, 1, function(x){drop(as.matrix(mm) %*% x)})
