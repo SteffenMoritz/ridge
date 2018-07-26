@@ -10,13 +10,21 @@
 ## Changes Version 2.2 -  Steffen Moritz
 
   * Made package CRAN ready again
+  
   * Created github repository for the package
+  
   * Fixed warning using Wpendantic gcc
+  
   * Adapted the DESCRIPTION file to latest CRAN requirements
+  
   * Renamed CHANGELOG to NEWS
+  
   * NEWS template update
+  
   * Changes to .C Method registration
+  
   * NAMESPACE fixes
+  
 
 ## Changes 2014-3-02 -	Erika Cule
 
@@ -51,7 +59,7 @@
 	* configure.ac detects whether openblas is available and if it is found, links to that. 
   	This speeds up computation. (http://xianyi.github.com/OpenBLAS/)
 	
-Changes 2012-7-19   Erika Cule
+## Changes 2012-7-19   Erika Cule
 
   * fixed a bug in linearRidge when scaling = "none"
   
