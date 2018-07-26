@@ -26,8 +26,10 @@ Be aware, that therefore I also can not guarantee
 to 100% that everything works as expected.
 
 ### Further information
-Erika Cule published a paper about the method, which you can find here
-https://arxiv.org/abs/1205.0686
+Erika Cule published also a scientific paper about the method, which you can find here: https://onlinelibrary.wiley.com/doi/abs/10.1002/gepi.21750
+
+Cule, Erika, and Maria De Iorio. "Ridge regression in prediction problems: automatic choice of the ridge parameter." Genetic epidemiology 37.7 (2013): 704-714.
+
 
 ### Version
 **2.2**
