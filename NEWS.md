@@ -1,4 +1,4 @@
-## Changes Version 2.3  Steffen Moritz
+## Changes Version 2.3 -  Steffen Moritz
 
   * Some fixed to remain on CRAN and comly with CRAN policy
   
@@ -7,7 +7,7 @@
   * Changed NEWS file to markup document
   
 
-## Changes Version 2.2  Steffen Moritz
+## Changes Version 2.2 -  Steffen Moritz
 
   * Made package CRAN ready again
   * Created github repository for the package
@@ -18,14 +18,14 @@
   * Changes to .C Method registration
   * NAMESPACE fixes
 
-## Changes 2014-3-02	Erika Cule
+## Changes 2014-3-02 -	Erika Cule
 
 	* Fixed layout of .Rd files
 	
 	* Added deletion of Makevars to cleanup script
 	
 
-## Changes 2012-9-27	Erika Cule 
+## Changes 2012-9-27 -	Erika Cule 
 
 	* Flat text (.txt) data files were moved from ridge/data to ridge/inst/extdata 
   	(in the source, which becomes ridge/extdata in the installed package). The .txt files 
@@ -37,12 +37,12 @@
 	  problem.
 
 
-## Changes 2012-8-21   Erika Cule 
+## Changes 2012-8-21 -   Erika Cule 
 
 	* Bug fix in src/commonFunctions.c
 
 
-## Changes 2012-8-21   Erika Cule
+## Changes 2012-8-21 -  Erika Cule
 
 	* Added configure.ac so that package will install if GSL >= 1.14 is not available 
 	  (with linearRidgeGenotypes, logisticRidgeGenotypes, linearRidgeGenotypesPredict and 
