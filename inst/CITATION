@@ -1,0 +1,11 @@
+year <- sub("-.*", "", meta$Date)
+vers <- paste("R package version", meta$Version)
+
+citHeader("To cite the ridge package, use:")
+
+bibentry(bibtype = "Manual",
+  title = "ridge: Ridge Regression with Automatic Selection of the Penalty Parameter",
+  author = personList(as.person("Steffen Moritz"), as.person("Erika Cule")),
+  year = year,
+  note = vers,
+  url = "https://CRAN.R-project.org/package=ridge")

@@ -484,9 +484,7 @@ int computePermPs(GSL_TYPE(vector) * permPs,
 	  if(MATHS_FUNCTION(fabs)(GSL_FUNCTION(matrix,get)(permbetamat, i, j)) > MATHS_FUNCTION(fabs)(GSL_FUNCTION(vector,get)(Bridge, i)))
 	    {
 	      tmp = tmp + 1;
-	    } else { 
-	    tmp = tmp;
-	  } 
+	    } 
    	} 
       GSL_FUNCTION(vector,set)(permPs, i-start, (PREC) tmp/(PREC) NPERM);
     }
