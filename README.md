@@ -1,4 +1,5 @@
-[![Project Status: Inactive – The project has reached a stable, usable state but is no longer being actively developed; support/maintenance will be provided as time allows.](https://www.repostatus.org/badges/latest/inactive.svg)](https://www.repostatus.org/#inactive)
+
+[![Project Status: Active The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 [![Build Status](https://travis-ci.org/SteffenMoritz/ridge.svg?branch=master)](https://travis-ci.org/SteffenMoritz/ridge)
 [![CRAN Version](http://www.r-pkg.org/badges/version/ridge)](https://cran.r-project.org/package=ridge)
 [![CRAN Downloads](http://cranlogs.r-pkg.org/badges/ridge)](https://cran.r-project.org/package=ridge)
