@@ -93,12 +93,12 @@ linearRidge <- function(formula, data, lambda = "automatic",
          if(is.null(nPCs))
            {
              propVar <- cumsum(Lambda) / sum(Lambda) * 100
-             if (which.max(propVar[propVar < 90]) > 0) 
+             if (length(which.max(propVar[propVar < 90])) > 0) 
              {
                nPCs <- which.max(propVar[propVar < 90]) + 1
              }
              else {
-               nPCs <- which.max(propVar) + 1
+               nPCs <- which.max(propVar) 
              }
              
            }

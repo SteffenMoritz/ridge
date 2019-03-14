@@ -421,8 +421,8 @@ $config_files
 Configuration headers:
 $config_headers
 
-Report bugs to <ejc05@imperial.ac.uk>.
-ridge home page: <http://cran.r-project.org/web/packages/ridge>."
+Report bugs to <steffen.moritz10@gmail.com>.
+ridge home page: <https://github.com/SteffenMoritz/ridge>."
 
 ac_cs_config=""
 ac_cs_version="\
@@ -434,7 +434,7 @@ Copyright (C) 2012 Free Software Foundation, Inc.
 This config.status script is free software; the Free Software Foundation
 gives unlimited permission to copy, distribute and modify it."
 
-ac_pwd='/Users/Steve/Documents/ridge'
+ac_pwd='/Users/Steve/Dropbox/ridge'
 srcdir='.'
 test -n "$AWK" || AWK=awk
 # The default lists apply if the user does not specify any file.
