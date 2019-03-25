@@ -421,8 +421,8 @@ $config_files
 Configuration headers:
 $config_headers
 
-Report bugs to <steffen.moritz10@gmail.com>.
-ridge home page: <https://github.com/SteffenMoritz/ridge>."
+Report bugs to <ejc05@imperial.ac.uk>.
+ridge home page: <http://cran.r-project.org/web/packages/ridge>."
 
 ac_cs_config=""
 ac_cs_version="\

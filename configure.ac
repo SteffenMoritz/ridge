@@ -1,4 +1,4 @@
-AC_INIT(ridge, version-2.1-2, ejc05@imperial.ac.uk, ridge-2.1-2.tar.gz, http://cran.r-project.org/web/packages/ridge)
+AC_INIT(ridge, version-2.4, steffen.moritz10@gmail.com, ridge_2.4.tar.gz, http://cran.r-project.org/web/packages/ridge)
 AC_CONFIG_HEADER([src/config.h])
 
 dnl Set the variable HAVE_GSL to TRUE
@@ -22,7 +22,8 @@ fi
 
 if test "${HAVE_GSL}" = TRUE; then
 dnl Define HAVE_GSL_H in src/config.h
-    AC_CHECK_HEADERS([gsl/gsl_version.h],AC_DEFINE(HAVE_GSL_HEADER),[HAVE_GSL=FALSE])
+    AC_CHECK_HEADERS([gsl/gsl_version.h],
+    AC_DEFINE(HAVE_GSL_HEADER,[], [Description]), [HAVE_GSL=FALSE])
     if test "${HAVE_GSL}" = FALSE; then
        AC_MSG_WARN([gsl headers not found, perhaps check the path?])
        AC_MSG_WARN([ridge will be installed, but some functions will be unavailable])
