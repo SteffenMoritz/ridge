@@ -1,3 +1,11 @@
+## Changes Version 2.5 -  Dan Frankowski
+
+  * Fix predict bug with factor variables
+
+  * Add vcov.ridgeLinear
+
+  * Add testthat tests
+
 ## Changes Version 2.4 -  Steffen Moritz
 
   * bugfix in logisticRidge and linearRidge see: https://github.com/SteffenMoritz/ridge/issues/2
