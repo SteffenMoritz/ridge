@@ -7,8 +7,8 @@ Date: 2020-03-17
 Authors@R: 
   c(
   person("Steffen", "Moritz", email="steffen.moritz10@gmail.com", role=c("aut", "cre"), comment = c(ORCID = "0000-0002-0085-1804")),
-  person("Erika", "Cule", role=c("aut"),
-  person("Dan", "Frankowski", role=c("ctb")))
+  person("Erika", "Cule", role=c("aut")),
+  person("Dan", "Frankowski", role=c("ctb"))
   )
 Author: Steffen Moritz [aut, cre] (<https://orcid.org/0000-0002-0085-1804>), Erika Cule [aut], Dan Frankowski [ctb]
 Maintainer: Steffen Moritz <steffen.moritz10@gmail.com>
