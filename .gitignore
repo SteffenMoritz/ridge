@@ -1,13 +1,21 @@
+# RStudio files
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
+
+# Compile artifacts
 src/*.o
 src/*.so
 src/*.dll
+
+# Miscellaneous OS X files
 /.dropbox
 /desktop.ini
 /.RData
 Icon
 
-
+# configure-generated files
+config.log
+config.status
+src/Makevars
