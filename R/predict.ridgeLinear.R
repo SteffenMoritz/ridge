@@ -7,7 +7,8 @@ predict.ridgeLinear <- function(object, newdata,
     if (!inherits(object, "ridgeLinear")) 
       warning("calling predict.ridgeLinear(<fake-ridgeLinear-object>) ...")
     if (missing(newdata) || is.null(newdata)) {
-      mm <- X <- model.frame(object)
+      # model.matrix handles factors properly, and includes an intercept term
+      mm <- X <- model.matrix(object, data=model.frame(object))
       mmDone <- TRUE
       offset <- object$offset
     }
@@ -26,12 +27,6 @@ predict.ridgeLinear <- function(object, newdata,
         offset <- offset + eval(object$call$offset, newdata)
       mmDone <- FALSE
     }
-    hasintercept <- attr(tt, "intercept")
-    ll <- attr(tt, "term.labels")
-    if(hasintercept)
-      mm <- cbind(1, X[,ll,drop=FALSE])
-    else
-      mm <- X[,ll,drop=FALSE]
     beta <- coef(object, all.coef = all.coef)
     if(all.coef)
       res <- apply(beta, 1, function(x){drop(as.matrix(mm) %*% x)})

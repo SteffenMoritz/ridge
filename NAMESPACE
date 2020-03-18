@@ -33,6 +33,7 @@ S3method(pvals, ridgeLinear)
 S3method(pvals, ridgeLogistic)
 S3method(summary, ridgeLinear)
 S3method(summary, ridgeLogistic)
+S3method(vcov, ridgeLinear)
 
 ## export functions to call C code - fitting
 export(linearRidgeGenotypes, logisticRidgeGenotypes)
