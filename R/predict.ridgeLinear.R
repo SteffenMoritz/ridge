@@ -8,7 +8,8 @@ predict.ridgeLinear <- function(object, newdata,
       warning("calling predict.ridgeLinear(<fake-ridgeLinear-object>) ...")
     if (missing(newdata) || is.null(newdata)) {
       # model.matrix handles factors properly, and includes an intercept term
-      mm <- X <- model.matrix(object, data=model.frame(object))
+      # TODO(dan): Add xlev here?
+      mm <- X <- model.matrix(object, data=model.frame(formula=tt, data=object$model_frame))
       mmDone <- TRUE
       offset <- object$offset
     }
