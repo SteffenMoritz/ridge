@@ -18,7 +18,7 @@ predict.ridgeLinear <- function(object, newdata,
                        xlev = object$xlevels)
       if (!is.null(cl <- attr(Terms, "dataClasses"))) 
         .checkMFClasses(cl, m)
-      mm <- X <- model.matrix(Terms, m)
+      mm <- X <- model.matrix(Terms, m, contrasts.arg = object$contrasts)
       offset <- rep(0, nrow(X))
       if (!is.null(off.num <- attr(tt, "offset"))) 
         for (i in off.num) offset <- offset + eval(attr(tt, 

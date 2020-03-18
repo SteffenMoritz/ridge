@@ -71,3 +71,16 @@ test_that("test linearRidge vcov method for lambda = 0, with a factor", {
   expect_equal(as.vector(vcov(model1)), as.vector(vcov(model2)),
                tolerance = tol, label = "vcov lambda 0, factors")
 })
+
+test_that("test linearRidge predict method for lambda = 0, with a factor and newdata", {
+  foo <- mtcars
+  foo$cyl_factor <- as.factor(paste0("cyl", foo$cyl))
+  model1 <- lm(mpg ~ wt + cyl_factor, data = foo)
+  model2 <- linearRidge(mpg ~ wt + cyl_factor, data = foo, lambda = 0.0)
+
+  # predict agrees between model1 and model2 when lambda is 0, with factor
+  newdata <- data.frame(wt=c(1.0), cyl_factor=c("cyl4"))
+  preds1 <- predict(model1, newdata)
+  preds2 <- predict(model2, newdata)
+  expect_equal(preds1, preds2, tolerance = tol, label = "predictions")
+})
