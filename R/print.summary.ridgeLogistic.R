@@ -1,5 +1,7 @@
 ## S3 method for class 'summary.ridgeLogistic'
 
+#' @rdname print
+#' @export
 print.summary.ridgeLogistic <- function(x, digits = max(3, getOption("digits") - 3),
                                         signif.stars = getOption("show.signif.stars"), ...)
   {

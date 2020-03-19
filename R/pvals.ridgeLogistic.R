@@ -1,5 +1,7 @@
 ## computing pvals for ridgeLogistic models
 
+#' @rdname pvals
+#' @export
 pvals.ridgeLogistic <- function(x, ...)
 {
   automatic <- x$automatic

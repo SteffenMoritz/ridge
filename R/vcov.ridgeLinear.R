@@ -1,5 +1,7 @@
 ## vcov method for ridgeLinear objects
 
+#' @rdname vcov
+#' @export
 vcov.ridgeLinear <- function (object, ...) 
 {
   # TODO(dan): check we didn't get any arguments we are unprepared for

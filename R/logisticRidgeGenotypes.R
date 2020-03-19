@@ -1,5 +1,6 @@
 ## Logistic Ridge Big function (calls C)
 
+#' @export
 logisticRidgeGenotypes <- function(genotypesfilename,
                                    phenotypesfilename,
                                    lambda = -1,

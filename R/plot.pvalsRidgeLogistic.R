@@ -1,6 +1,8 @@
 ## Plot the pval trace
 ## For pvalsRidgeLogistic objects
 
+#' @rdname plot
+#' @export
 plot.pvalsRidgeLogistic <- function(x, y = NULL, ...)
   {
     lambda <- x$lambda
@@ -11,23 +13,23 @@ plot.pvalsRidgeLogistic <- function(x, y = NULL, ...)
     ## x is a pvalsRidgeLinear object
     if(length(lambda) == 1)
       {
-        col.vector <- rainbow(length(pval))
-        plot(x = rep(lambda, length(pval)), y = pval, xlab = "lambda", ylab = "-log(10) pvalue", col = col.vector, pch = 19)
+        col.vector <- grDevices::rainbow(length(pval))
+        graphics::plot(x = rep(lambda, length(pval)), y = pval, xlab = "lambda", ylab = "-log(10) pvalue", col = col.vector, pch = 19)
       } else {
-        col.vector <- rainbow(nrow(pval))
+        col.vector <- grDevices::rainbow(nrow(pval))
         if (automatic) {
           chosen.nPCs <- x$chosen.nPCs
-          plot(x = seq(nPCs), y = pval[1,], ylim = c(0, max(pval, na.rm = TRUE)), xlab = "nPCs", ylab = "-log(10) pvalue", col = col.vector[1], type = "l", main = "pvalue trace")
+          graphics::plot(x = seq(nPCs), y = pval[1,], ylim = c(0, max(pval, na.rm = TRUE)), xlab = "nPCs", ylab = "-log(10) pvalue", col = col.vector[1], type = "l", main = "pvalue trace")
           for(i in 2:nrow(pval))
             {
-              lines(x = seq(nPCs), y = pval[i,], col = col.vector[i])
+              graphics::lines(x = seq(nPCs), y = pval[i,], col = col.vector[i])
             }
-          abline(v = chosen.nPCs, lty = 2)
+          graphics::abline(v = chosen.nPCs, lty = 2)
         } else {
-          plot(x = lambda, y = pval[1,], xlim=range(lambda), ylim = c(0, max(pval, na.rm = TRUE)), xlab = "lambda", ylab = "-log(10) pvalue", col = col.vector[1], type = "l", main = "pvalue trace")
+          graphics::plot(x = lambda, y = pval[1,], xlim=range(lambda), ylim = c(0, max(pval, na.rm = TRUE)), xlab = "lambda", ylab = "-log(10) pvalue", col = col.vector[1], type = "l", main = "pvalue trace")
           for(i in 2:nrow(pval))
             {
-              lines(x = lambda, y = pval[i,], col = col.vector[i])
+              graphics::lines(x = lambda, y = pval[i,], col = col.vector[i])
             }
         }
       }

@@ -1,5 +1,7 @@
 ## predict method for linear ridge regression models
 
+#' @rdname predict
+#' @export
 predict.ridgeLinear <- function(object, newdata,  
     na.action = na.pass, all.coef = FALSE, ...)
   {

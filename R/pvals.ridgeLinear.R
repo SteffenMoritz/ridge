@@ -1,5 +1,7 @@
 ## computing pvals for ridgeLinear models
 
+#' @rdname pvals
+#' @export
 pvals.ridgeLinear <- function(x, ...)
 {
   automatic <- x$automatic

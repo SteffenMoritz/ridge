@@ -1,5 +1,6 @@
 ## Linear Ridge Big Predict function (calls C)
 
+#' @export
 linearRidgeGenotypesPredict <- function(genotypesfilename,
                                         betafilename,
                                         phenotypesfilename = NULL,

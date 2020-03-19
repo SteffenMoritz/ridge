@@ -1,5 +1,6 @@
 ## R function to fit the logistic ridge regression model
 
+#' @export
 logisticRidge <- function(formula, data, lambda = "automatic",
                           nPCs = NULL, scaling = c("corrForm", "scale", "none"), ...) 
   {
@@ -45,9 +46,9 @@ logisticRidge <- function(formula, data, lambda = "automatic",
     m <- eval.parent(m)
     Terms <- attr(m, "terms")
     ## Extract the response
-    Y <- model.response(m)
+    Y <- stats::model.response((m)
     ## Construct the design matrix
-    X <- model.matrix(Terms, m)
+    X <- stats::model.matrix((Terms, m)
     ## get the dimensions of X in terms of n and p
     n <- nrow(X)
     p <- ncol(X)
