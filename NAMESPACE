@@ -2,9 +2,9 @@ useDynLib(ridge, .registration = TRUE)
 
  importFrom("grDevices", "rainbow")
   importFrom("graphics", "abline", "lines", "plot")
-  importFrom("stats", ".checkMFClasses", "coef", "delete.response",
+  importFrom("stats", ".checkMFClasses", ".getXlevels", "coef", "delete.response",
              "model.frame", "model.matrix", "model.response", "na.pass",
-             "pnorm", "printCoefmat", "terms")
+             "pnorm", "predict", "printCoefmat", "terms")
   importFrom("utils", "read.table")
 
 # functions
