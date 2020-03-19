@@ -201,7 +201,7 @@ linearRidge <- function(formula, data, lambda = "automatic",
     colnames(df) <- c("model", "variance", "residual")
     res <- list(automatic = automatic, call = cl, coef = cbind(drop(coef)), df = df,
                 Inter = Inter, isScaled = isScaled, lambda = lambda, scales = Xscale,
-                terms = Terms, x = X, xm = Xm, y = Y, ym = Ym,
+                terms = Terms, x = X, xm = Xm, y = Y, ym = Ym, model_frame = m,
                 contrasts = contrasts, xlevels = xlevels)
     ## This line needs fixing
     if(!is.null(nPCs))
