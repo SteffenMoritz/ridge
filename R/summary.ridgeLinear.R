@@ -13,7 +13,7 @@ summary.ridgeLinear <- function(object, all.coef = FALSE, ...)
     pvalues <- pvals(object)
     summaries <- vector("list", length(res$lambda))
     res$all.coef = all.coef
-    coefs <- rbind(coef(object, all.coef = TRUE))
+    coefs <- rbind(stats::coef(object, all.coef = TRUE))
     if(res$automatic)
       {
         res$chosen.nPCs <- object$chosen.nPCs

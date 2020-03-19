@@ -12,7 +12,7 @@ vcov.ridgeLinear <- function (object, ...)
   # For now, only works if we have an intercept
   stopifnot(object$Inter == 1)
   # drop "(Intercept)" from names
-  coef_names <- attr(coef(object), "names")[-1]
+  coef_names <- attr(stats::coef(object), "names")[-1]
   # get data, with intercept term
   X <- stats::model.matrix(object, data=data)
   # make y the original data:
