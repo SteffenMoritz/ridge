@@ -1,5 +1,8 @@
 ## summary function for ridgeLogistic object
 
+#' @rdname summary
+#' @export
+#' @importFrom stats pnorm
 summary.ridgeLogistic <- function(object, all.coef = FALSE, ...)
   {
     res <- vector("list")

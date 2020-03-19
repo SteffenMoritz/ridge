@@ -1,6 +1,11 @@
 ## Plot the pval trace
 ## For pvalsRidgeLinear objects
 
+#' @rdname plot
+#' @export
+#' @importFrom utils read.table
+#' @importFrom graphics plot lines abline
+#' @importFrom grDevices rainbow
 plot.pvalsRidgeLinear <- function(x, y = NULL, ...)
   {
     lambda <- x$lambda

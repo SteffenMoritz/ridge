@@ -26,6 +26,7 @@ Imports:
 License: GPL-2
 SystemRequirements: Gnu Scientific Library version >= 1.14
 NeedsCompilation: yes
-RoxygenNote: 6.0.1
+RoxygenNote: 7.1.0
+Encoding: UTF-8
 Suggests: 
     testthat

@@ -1,5 +1,8 @@
 ## summary function for ridgeLinear object
 
+#' @rdname summary
+#' @export
+#' @importFrom stats coef
 summary.ridgeLinear <- function(object, all.coef = FALSE, ...)
   {
     res <- vector("list")

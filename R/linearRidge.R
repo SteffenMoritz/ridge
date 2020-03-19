@@ -1,5 +1,7 @@
 ## R function to fit the linear ridge regression model
 
+#' @export
+#' @importFrom stats .getXlevels predict model.response model.matrix
 linearRidge <- function(formula, data, lambda = "automatic",
                         nPCs = NULL, scaling = c("corrForm", "scale", "none"), ...)
   {

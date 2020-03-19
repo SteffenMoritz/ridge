@@ -1,6 +1,11 @@
 ## plot the ridge trace
 ## for ridgeLinear objects
 
+#' @rdname plot
+#' @export
+#' @importFrom stats coef
+#' @importFrom graphics plot lines abline
+#' @importFrom grDevices rainbow
 plot.ridgeLinear <- function(x, y = NULL, ...)
   {
     Inter <- x$Inter

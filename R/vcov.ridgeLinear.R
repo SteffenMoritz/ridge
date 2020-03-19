@@ -1,5 +1,8 @@
 ## vcov method for ridgeLinear objects
 
+#' @rdname vcov
+#' @export
+#' @importFrom stats coef model.frame model.matrix .checkMFClasses
 vcov.ridgeLinear <- function (object, ...) 
 {
   # TODO(dan): check we didn't get any arguments we are unprepared for

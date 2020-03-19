@@ -1,5 +1,8 @@
 ## predict method for linear ridge regression models
 
+#' @rdname predict
+#' @export
+#' @importFrom stats na.pass terms model.matrix model.frame delete.response .checkMFClasses coef
 predict.ridgeLinear <- function(object, newdata,  
     na.action = na.pass, all.coef = FALSE, ...)
   {
