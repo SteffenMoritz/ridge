@@ -10,7 +10,7 @@
 #' @rdname predict
 #' @export
 predict.ridgeLogistic <- function (object, newdata = NULL, type = c("link", "response"), 
-    na.action = na.pass, all.coef = FALSE, ...) 
+    na.action = stats::na.pass, all.coef = FALSE, ...) 
 {
   tt <- terms(object)
   type <- match.arg(type) ## Match the type argument

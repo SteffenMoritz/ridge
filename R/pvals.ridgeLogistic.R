@@ -43,7 +43,7 @@ pvals.ridgeLogistic <- function(x, ...)
   V <- mapply("computeV", W, KI, SIMPLIFY = FALSE)
   se <- sapply(V, function(x){sqrt(diag(x))})
   tstat <-B/se
-  pval <- 2*(1-pnorm(abs(tstat)))
+  pval <- 2*(1 - stats::pnorm(abs(tstat)))
   if(Inter)
     {
       B <- B[-1, ]

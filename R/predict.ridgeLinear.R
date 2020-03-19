@@ -3,14 +3,14 @@
 #' @rdname predict
 #' @export
 predict.ridgeLinear <- function(object, newdata,  
-    na.action = na.pass, all.coef = FALSE, ...)
+    na.action = stats::na.pass, all.coef = FALSE, ...)
   {
     tt <- terms(object)
     if (!inherits(object, "ridgeLinear")) 
       warning("calling predict.ridgeLinear(<fake-ridgeLinear-object>) ...")
     if (missing(newdata) || is.null(newdata)) {
       # model.matrix handles factors properly, and includes an intercept term
-      mm <- X <- stats::model.matrix(object, data=model.frame(object))
+      mm <- X <- stats::model.matrix(object, data=stats::model.frame(object))
       mmDone <- TRUE
       offset <- object$offset
     }
