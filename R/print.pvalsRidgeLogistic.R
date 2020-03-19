@@ -16,7 +16,7 @@ print.pvalsRidgeLogistic <- function(x, digits = max(3, getOption("digits") - 3)
             colnames(coefs) <- c("Estimate", "Std. Error", "t value", "Pr(>|t|)")
           }
         cat(gettextf("\n\tlambda %f chosen automatically using %d PCs\n\n", x$lambda[i], x$chosen.nPCs))
-        printCoefmat(coefs, digits = digits, signif.stars = signif.stars, 
+        stats::printCoefmat(coefs, digits = digits, signif.stars = signif.stars, 
                      na.print = "NA", ...)
       } else {
         for(i in seq(length(x$lambda)))
@@ -35,7 +35,7 @@ print.pvalsRidgeLogistic <- function(x, digits = max(3, getOption("digits") - 3)
             if(!is.null(x$max.nPCs))
               cat(gettextf(", computed using %d PCs\n", i))
             cat("\n")
-            printCoefmat(coefs, digits = digits, signif.stars = signif.stars, 
+            stats::printCoefmat(coefs, digits = digits, signif.stars = signif.stars, 
                          na.print = "NA", ...)
           }
       }

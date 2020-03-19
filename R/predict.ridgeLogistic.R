@@ -9,10 +9,11 @@
 
 #' @rdname predict
 #' @export
+#' @importFrom stats na.pass
 predict.ridgeLogistic <- function (object, newdata = NULL, type = c("link", "response"), 
-    na.action = stats::na.pass, all.coef = FALSE, ...) 
+    na.action = na.pass, all.coef = FALSE, ...) 
 {
-  tt <- terms(object)
+  tt <- stats::terms(object)
   type <- match.arg(type) ## Match the type argument
   na.act <- object$na.action ## Get the na.action statement
   object$na.action <- NULL ## Set object$na.action to NULL
@@ -25,7 +26,7 @@ predict.ridgeLogistic <- function (object, newdata = NULL, type = c("link", "res
     m <- stats::model.frame(Terms, newdata, na.action = na.action, 
                      xlev = object$xlevels)
     if (!is.null(cl <- attr(Terms, "dataClasses"))) 
-      .checkMFClasses(cl, m)
+      stats::.checkMFClasses(cl, m)
     mm <- X <- stats::model.matrix(Terms, m)
     offset <- rep(0, nrow(X))
     if (!is.null(off.num <- attr(tt, "offset"))) 

@@ -13,7 +13,7 @@ print.summary.ridgeLinear <- function(x, digits = max(3, getOption("digits") - 3
         chosenSummary <- summaries[[x$chosen.nPCs]]
         cat("\nCoefficients:\n")
         coefs <- chosenSummary$coefficients
-        printCoefmat(coefs, digits = digits, signif.stars = signif.stars, 
+        stats::printCoefmat(coefs, digits = digits, signif.stars = signif.stars, 
                      na.print = "NA", ...)
         cat("\nRidge parameter:", chosenSummary$lambda)
         if(x$automatic)
@@ -33,7 +33,7 @@ print.summary.ridgeLinear <- function(x, digits = max(3, getOption("digits") - 3
             chosenSummary <- summaries[[i]]
             cat("\nCoefficients:\n")
             coefs <- chosenSummary$coefficients
-            printCoefmat(coefs, digits = digits, signif.stars = signif.stars, 
+            stats::printCoefmat(coefs, digits = digits, signif.stars = signif.stars, 
                          na.print = "NA", ...)
             cat("\nRidge parameter:", chosenSummary$lambda)
             if(x$automatic && (x$chosen.nPCs == i))

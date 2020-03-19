@@ -2,10 +2,11 @@
 
 #' @rdname predict
 #' @export
+#' @importFrom stats na.pass
 predict.ridgeLinear <- function(object, newdata,  
-    na.action = stats::na.pass, all.coef = FALSE, ...)
+    na.action = na.pass, all.coef = FALSE, ...)
   {
-    tt <- terms(object)
+    tt <- stats::terms(object)
     if (!inherits(object, "ridgeLinear")) 
       warning("calling predict.ridgeLinear(<fake-ridgeLinear-object>) ...")
     if (missing(newdata) || is.null(newdata)) {
@@ -19,7 +20,7 @@ predict.ridgeLinear <- function(object, newdata,
       m <- stats::model.frame(Terms, newdata, na.action = na.action, 
                        xlev = object$xlevels)
       if (!is.null(cl <- attr(Terms, "dataClasses"))) 
-        .checkMFClasses(cl, m)
+        stats::.checkMFClasses(cl, m)
       mm <- X <- stats::model.matrix(Terms, m, contrasts.arg = object$contrasts)
       offset <- rep(0, nrow(X))
       if (!is.null(off.num <- attr(tt, "offset"))) 
