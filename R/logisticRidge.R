@@ -46,9 +46,9 @@ logisticRidge <- function(formula, data, lambda = "automatic",
     m <- eval.parent(m)
     Terms <- attr(m, "terms")
     ## Extract the response
-    Y <- stats::model.response((m)
+    Y <- stats::model.response(m)
     ## Construct the design matrix
-    X <- stats::model.matrix((Terms, m)
+    X <- stats::model.matrix(Terms, m)
     ## get the dimensions of X in terms of n and p
     n <- nrow(X)
     p <- ncol(X)

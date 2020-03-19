@@ -46,7 +46,7 @@ linearRidgeGenotypesPredict <- function(genotypesfilename,
             model = as.character("linear"),
             predict = as.integer(1),
             verbose = as.integer(verbose))
-  y <- read.table(phenotypesfilename, colClasses = c("numeric"),  col.names = c("PredictedPhenotypes"))
+  y <- utils::read.table(phenotypesfilename, colClasses = c("numeric"),  col.names = c("PredictedPhenotypes"))
   if(!phenotypesFileExists)
     unlink(phenotypesfilename)
   return(y)

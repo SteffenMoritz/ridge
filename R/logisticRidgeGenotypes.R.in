@@ -92,7 +92,7 @@ logisticRidgeGenotypes <- function(genotypesfilename,
               model = as.character("logistic"),
               predict = as.integer(0),
               verbose = as.integer(verbose))
-    beta <- read.table(betafilename, row.names = 1, colClasses = c("character", "numeric"), col.names = c("", "B"))
+    beta <- utils::read.table(betafilename, row.names = 1, colClasses = c("character", "numeric"), col.names = c("", "B"))
     if(!betaFileExists)
       unlink(betafilename)
     return(beta)
