@@ -3,6 +3,8 @@
 
 #' @rdname plot
 #' @export
+#' @importFrom graphics plot lines abline
+#' @importFrom grDevices rainbow
 plot.pvalsRidgeLogistic <- function(x, y = NULL, ...)
   {
     lambda <- x$lambda

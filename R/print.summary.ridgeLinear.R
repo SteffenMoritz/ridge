@@ -2,6 +2,7 @@
 
 #' @rdname print
 #' @export
+#' @importFrom stats printCoefmat
 print.summary.ridgeLinear <- function(x, digits = max(3, getOption("digits") - 3),
                                       signif.stars = getOption("show.signif.stars"), ...)
   {

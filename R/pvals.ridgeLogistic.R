@@ -2,6 +2,7 @@
 
 #' @rdname pvals
 #' @export
+#' @importFrom stats pnorm
 pvals.ridgeLogistic <- function(x, ...)
 {
   automatic <- x$automatic

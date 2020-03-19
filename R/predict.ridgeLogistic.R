@@ -9,7 +9,7 @@
 
 #' @rdname predict
 #' @export
-#' @importFrom stats na.pass
+#' @importFrom stats na.pass terms model.frame delete.response .checkMFClasses model.matrix coef
 predict.ridgeLogistic <- function (object, newdata = NULL, type = c("link", "response"), 
     na.action = na.pass, all.coef = FALSE, ...) 
 {
