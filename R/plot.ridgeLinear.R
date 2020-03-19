@@ -1,6 +1,8 @@
 ## plot the ridge trace
 ## for ridgeLinear objects
 
+#' @rdname plot
+#' @export
 plot.ridgeLinear <- function(x, y = NULL, ...)
   {
     Inter <- x$Inter

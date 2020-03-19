@@ -1,6 +1,8 @@
 ## Plot the pval trace
 ## For pvalsRidgeLogistic objects
 
+#' @rdname plot
+#' @export
 plot.pvalsRidgeLogistic <- function(x, y = NULL, ...)
   {
     lambda <- x$lambda

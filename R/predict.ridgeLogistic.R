@@ -6,6 +6,10 @@
 ## on the scale of the original data
 
 ## predict.glm code
+
+#' @rdname predict
+#' @export
+#' @importFrom stats na.pass
 predict.ridgeLogistic <- function (object, newdata = NULL, type = c("link", "response"), 
     na.action = na.pass, all.coef = FALSE, ...) 
 {

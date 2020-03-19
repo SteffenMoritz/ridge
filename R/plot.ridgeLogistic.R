@@ -1,6 +1,8 @@
 ## plot the ridge trace
 ## for ridgeLogistic objects
 
+#' @rdname plot
+#' @export
 plot.ridgeLogistic <- function(x, y = NULL, ...)
   {
     Inter <- x$Inter

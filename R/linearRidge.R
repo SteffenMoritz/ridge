@@ -1,5 +1,6 @@
 ## R function to fit the linear ridge regression model
 
+#' @export
 linearRidge <- function(formula, data, lambda = "automatic",
                         nPCs = NULL, scaling = c("corrForm", "scale", "none"), ...)
   {

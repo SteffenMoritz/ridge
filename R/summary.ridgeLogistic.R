@@ -1,5 +1,7 @@
 ## summary function for ridgeLogistic object
 
+#' @rdname summary
+#' @export
 summary.ridgeLogistic <- function(object, all.coef = FALSE, ...)
   {
     res <- vector("list")

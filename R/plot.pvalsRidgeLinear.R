@@ -1,6 +1,8 @@
 ## Plot the pval trace
 ## For pvalsRidgeLinear objects
 
+#' @rdname plot
+#' @export
 plot.pvalsRidgeLinear <- function(x, y = NULL, ...)
   {
     lambda <- x$lambda

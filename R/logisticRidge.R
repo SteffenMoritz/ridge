@@ -1,5 +1,6 @@
 ## R function to fit the logistic ridge regression model
 
+#' @export
 logisticRidge <- function(formula, data, lambda = "automatic",
                           nPCs = NULL, scaling = c("corrForm", "scale", "none"), ...) 
   {

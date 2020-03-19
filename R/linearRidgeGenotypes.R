@@ -1,5 +1,6 @@
 ## Linear Ridge Big function (calls C)
 
+#' @export
 linearRidgeGenotypes <- function(genotypesfilename,
                                    phenotypesfilename,
                                    lambda = -1,

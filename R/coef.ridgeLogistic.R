@@ -1,5 +1,7 @@
 ## coef method for ridgeLogistic objects
 
+#' @rdname coef
+#' @export
 coef.ridgeLogistic <- function (object, all.coef = FALSE, ...) 
 {
   if (object$Inter) {

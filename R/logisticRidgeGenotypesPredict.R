@@ -1,5 +1,6 @@
 ## Logistic Ridge Big Predict function (calls C)
 
+#' @export
 logisticRidgeGenotypesPredict <- function(genotypesfilename,
                                         betafilename,
                                         phenotypesfilename = NULL,
