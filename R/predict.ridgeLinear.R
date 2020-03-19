@@ -15,7 +15,7 @@ predict.ridgeLinear <- function(object, newdata,
       offset <- object$offset
     }
     else {
-      Terms <- delete.response(tt)
+      Terms <- stats::delete.response(tt)
       m <- stats::model.frame(Terms, newdata, na.action = na.action, 
                        xlev = object$xlevels)
       if (!is.null(cl <- attr(Terms, "dataClasses"))) 

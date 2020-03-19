@@ -27,7 +27,7 @@ pvals.ridgeLinear <- function(x, ...)
   rownames(se) <- rownames(beta)
   colnames(se) <- colnames(beta)
   tstat <- abs(beta / se)
-  pval <- 2 * (1 - pnorm(tstat))
+  pval <- 2 * (1 - stats::pnorm(tstat))
   res <- list(coef = beta, se = se, tstat = tstat, pval = pval, isScaled = isScaled, automatic = automatic, lambda = lambda, chosen.nPCs = chosen.nPCs, max.nPCs = max.nPCs)
   class(res) <- "pvalsRidgeLinear"
   res

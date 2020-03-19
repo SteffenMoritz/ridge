@@ -21,7 +21,7 @@ predict.ridgeLogistic <- function (object, newdata = NULL, type = c("link", "res
     mmDone <- TRUE
     offset <- object$offset
   } else { ## Else if new data is provided
-    Terms <- delete.response(tt)
+    Terms <- stats::delete.response(tt)
     m <- stats::model.frame(Terms, newdata, na.action = na.action, 
                      xlev = object$xlevels)
     if (!is.null(cl <- attr(Terms, "dataClasses"))) 
