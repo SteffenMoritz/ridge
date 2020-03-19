@@ -24,7 +24,7 @@ vcov.ridgeLinear <- function (object, ...)
   betaHat <- inv_mat %*% t(X) %*% y_orig
   # sum squared residuals divided by degrees of freedom
   # degrees of freedom: # values minus coefficients and intercept term
-  sigma2 <- sum( (y_orig - predict(object, data=data))^2 ) /
+  sigma2 <- sum( (y_orig - stats::predict(object, data=data))^2 ) /
     (length(y_orig) - length(coef_names) - 1)
   var_betaHat <- sigma2 * inv_mat
   return(var_betaHat)
