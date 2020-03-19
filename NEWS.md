@@ -5,6 +5,8 @@
   * Add vcov.ridgeLinear
 
   * Add testthat tests
+  
+  * Changed documentation partially to roxygen2
 
 ## Changes Version 2.4 -  Steffen Moritz
 

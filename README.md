@@ -28,7 +28,7 @@ Cule, Erika, and Maria De Iorio. "Ridge regression in prediction problems: autom
 
 
 ### Version
-**2.4**
+**2.5**
 
 ### License
 GPL-2

@@ -5,7 +5,7 @@ citHeader("To cite the ridge package, use:")
 
 bibentry(bibtype = "Manual",
   title = "ridge: Ridge Regression with Automatic Selection of the Penalty Parameter",
-  author = personList(as.person("Erika Cule"), as.person("Steffen Moritz")),
+  author = personList(as.person("Erika Cule"), as.person("Steffen Moritz"), as.person("Dan Frankowski")),
   year = year,
   note = vers,
   url = "https://CRAN.R-project.org/package=ridge")
