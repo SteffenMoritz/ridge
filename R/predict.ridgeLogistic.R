@@ -17,16 +17,16 @@ predict.ridgeLogistic <- function (object, newdata = NULL, type = c("link", "res
   na.act <- object$na.action ## Get the na.action statement
   object$na.action <- NULL ## Set object$na.action to NULL
   if (missing(newdata) || is.null(newdata)) { ## If there is no newdata
-    mm <- X <- model.frame(object)
+    mm <- X <- stats::model.frame(object)
     mmDone <- TRUE
     offset <- object$offset
   } else { ## Else if new data is provided
     Terms <- delete.response(tt)
-    m <- model.frame(Terms, newdata, na.action = na.action, 
+    m <- stats::model.frame(Terms, newdata, na.action = na.action, 
                      xlev = object$xlevels)
     if (!is.null(cl <- attr(Terms, "dataClasses"))) 
       .checkMFClasses(cl, m)
-    mm <- X <- model.matrix(Terms, m)
+    mm <- X <- stats::model.matrix(Terms, m)
     offset <- rep(0, nrow(X))
     if (!is.null(off.num <- attr(tt, "offset"))) 
       for (i in off.num) offset <- offset + eval(attr(tt, 
@@ -41,7 +41,7 @@ predict.ridgeLogistic <- function (object, newdata = NULL, type = c("link", "res
     mm <- cbind(1, X[,ll])
   else
     mm <- X[,ll]
-  B <- coef(object, all.coef = all.coef)
+  B <- stats::coef(object, all.coef = all.coef)
   if(all.coef)
     {
       XB <- apply(B, 1, function(x) {as.matrix(X) %*% x})

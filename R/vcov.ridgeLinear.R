@@ -7,14 +7,14 @@ vcov.ridgeLinear <- function (object, ...)
   # TODO(dan): check we didn't get any arguments we are unprepared for
 
   # get back the original data
-  data <- model.frame(object)
+  data <- stats::model.frame(object)
 
   # For now, only works if we have an intercept
   stopifnot(object$Inter == 1)
   # drop "(Intercept)" from names
   coef_names <- attr(coef(object), "names")[-1]
   # get data, with intercept term
-  X <- model.matrix(object, data=data)
+  X <- stats::model.matrix(object, data=data)
   # make y the original data:
   y_orig <- with(object, y+ym)
   # See also equation 3.44 of "elements of statistical learning", hastie, Tibshirani, Friedman
