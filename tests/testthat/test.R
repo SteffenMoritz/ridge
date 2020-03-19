@@ -12,6 +12,17 @@ test_that("test linearRidge agrees with lm when lambda = 0", {
   expect_equal(predict(model1), predict(model2), tolerance = tol, label = "predictions")
 })
 
+test_that("test linearRidge with formula variable that goes out of scope", {
+  the_formula <- formula('mpg ~ wt + cyl')
+  model1 <- lm(the_formula, data = mtcars)
+  model2 <- linearRidge(the_formula, data = mtcars, lambda = 0)
+  # suppose the_formula goes away:
+  rm(the_formula)
+  
+  expect_equal(coef(model1), coef(model2), tolerance = tol, label = "coefficients")
+  expect_equal(predict(model1), predict(model2), tolerance = tol, label = "predictions")
+})
+
 test_that("test linearRidge near lm when lambda = 0.01", {
   model1 <- lm(mpg ~ wt + cyl, data = mtcars)
   model2 <- linearRidge(mpg ~ wt + cyl, data = mtcars, lambda = 0.01)
