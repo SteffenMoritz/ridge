@@ -1,6 +1,7 @@
 \name{linearRidge}
 \alias{linearRidge}
 \alias{coef.ridgeLinear}
+\alias{nobs.ridgeLinear}
 \alias{plot.ridgeLinear}
 \alias{predict.ridgeLinear}
 \alias{print.ridgeLinear}
