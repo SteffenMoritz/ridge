@@ -29,4 +29,5 @@ NeedsCompilation: yes
 RoxygenNote: 7.1.0
 Encoding: UTF-8
 Suggests: 
-    testthat
+    testthat,
+    datasets

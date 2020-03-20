@@ -1,4 +1,5 @@
 library("ridge")
+library("datasets")
 
 tol <- 0.0001
 
@@ -95,3 +96,100 @@ test_that("test linearRidge predict method for lambda = 0, with a factor and new
   preds2 <- predict(model2, newdata)
   expect_equal(preds1, preds2, tolerance = tol, label = "predictions")
 })
+
+
+context("Simple run tests for different datasets")
+
+test_that("Wrong argument -  Hair is not numeric or logical", {
+  data(HairEyeColor)
+  expect_warning(linearRidge(Hair ~ ., data = as.data.frame(HairEyeColor)))
+})
+
+test_that("Runs model + predict with HairEyeColor dataset", {
+  
+  data(HairEyeColor)
+  model <- linearRidge(Freq ~ ., data = as.data.frame(HairEyeColor))
+  pred <- predict(model, as.data.frame(HairEyeColor))
+  expect_more_than(pred[1],18)
+})
+
+test_that("Runs model + predict with HairEyeColor dataset - version with different formula", {
+  
+  data(HairEyeColor)
+  model <- linearRidge(Freq ~ Eye, data = as.data.frame(HairEyeColor))
+  pred <- predict(model, as.data.frame(HairEyeColor))
+  expect_more_than(pred[1],22)
+})
+
+
+test_that("Runs model + predict with GenBin dataset", {
+  
+  data(GenBin)
+  model <- logisticRidge(Phenotypes ~ ., data = as.data.frame(GenBin))
+  pred <- predict(model, as.data.frame(GenBin))
+  expect_less_than(pred[1],0)
+})
+
+
+test_that("Runs model + predict with Hald dataset", {
+  
+  data(Hald)
+  model <- linearRidge(y ~ ., data = as.data.frame(Hald))
+  pred <- predict(model, as.data.frame(Hald))
+  expect_more_than(pred[1],70)
+})
+
+test_that("Runs model + predict with Hald dataset", {
+  
+  data(Hald)
+  model <- linearRidge(X1 ~ ., data = as.data.frame(Hald), scaling="none")
+  pred <- predict(model, as.data.frame(Hald))
+  expect_more_than(pred[1],7)
+})
+
+test_that("Runs model + predict with Hald dataset", {
+  
+  data(Hald)
+  model <- linearRidge(y ~ X1 + X2 + X3, data = as.data.frame(Hald), scaling="none")
+  pred <- predict(model, as.data.frame(Hald))
+  expect_more_than(pred[1],78)
+})
+
+test_that("Runs model + predict with Hald dataset", {
+  
+  data(Hald)
+  model <- linearRidge(y ~ X1 + X2 + X3, data = as.data.frame(Hald), lambda = 0.01, scaling="none")
+  pred <- predict(model, as.data.frame(Hald))
+  expect_more_than(pred[1],78)
+})
+
+
+test_that("Runs model + predict with Gorman dataset", {
+  
+  data(Gorman)
+  model <- linearRidge(logY ~ ., data = as.data.frame(Gorman))
+  pred <- predict(model, as.data.frame(Gorman))
+  expect_more_than(pred[1],2)
+})
+
+test_that("Runs model + predict with iris dataset", {
+  
+  data(iris)
+  model <- linearRidge(Sepal.Length ~ ., data = as.data.frame(iris))
+  pred <- predict(model, as.data.frame(iris))
+  expect_more_than(pred[1],4)
+})
+
+
+test_that("Runs model + predict with ToothGrowth dataset", {
+  
+  data(ToothGrowth)
+  model <- linearRidge(len ~ ., data = as.data.frame(ToothGrowth))
+  pred <- predict(model, as.data.frame(ToothGrowth))
+  expect_more_than(pred[1],10)
+})
+                          
+
+
+
+
