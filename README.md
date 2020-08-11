@@ -1,5 +1,6 @@
 <img src="man/figures/ridge.png" align="right" width="150" height="150" alt="ridge Logo" />
-------------
+
+
 [![Project Status: Active The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 [![Build Status](https://travis-ci.org/SteffenMoritz/ridge.svg?branch=master)](https://travis-ci.org/SteffenMoritz/ridge)
 [![CRAN Version](http://www.r-pkg.org/badges/version/ridge)](https://cran.r-project.org/package=ridge)
