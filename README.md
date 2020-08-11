@@ -5,7 +5,7 @@
 [![CRAN Downloads](http://cranlogs.r-pkg.org/badges/ridge)](https://cran.r-project.org/package=ridge)
 
 
-# ridge: Ridge Regression with automatic selection of the penalty parameter
+# ridge: Ridge Regression with automatic selection of the penalty parameter <img src="man/figures/ridge.png" align="right" width="565" height="382" alt="ridge Logo" />
 
 ###About
 The ridge package offers linear and logistic ridge regression, especially for small 
