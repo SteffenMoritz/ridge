@@ -1,13 +1,14 @@
-
+<img src="man/figures/ridge.png" align="right" width="150" height="150" alt="ridge Logo" />
+------------
 [![Project Status: Active The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 [![Build Status](https://travis-ci.org/SteffenMoritz/ridge.svg?branch=master)](https://travis-ci.org/SteffenMoritz/ridge)
 [![CRAN Version](http://www.r-pkg.org/badges/version/ridge)](https://cran.r-project.org/package=ridge)
 [![CRAN Downloads](http://cranlogs.r-pkg.org/badges/ridge)](https://cran.r-project.org/package=ridge)
 
 
-# ridge: Ridge Regression with automatic selection of the penalty parameter <img src="man/figures/ridge.png" align="right" width="565" height="382" alt="ridge Logo" />
+# ridge: Ridge Regression with automatic selection of the penalty parameter 
 
-###About
+### About
 The ridge package offers linear and logistic ridge regression, especially for small 
 data sets and genome-wide SNP data.
 
