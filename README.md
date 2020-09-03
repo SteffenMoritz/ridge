@@ -1,10 +1,10 @@
 <img src="man/figures/ridge.png" align="right" width="150" height="150" alt="ridge Logo" />
 
 
-[![Project Status: Active The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
+[![Project Status: Active The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![Build Status](https://travis-ci.org/SteffenMoritz/ridge.svg?branch=master)](https://travis-ci.org/SteffenMoritz/ridge)
-[![CRAN Version](http://www.r-pkg.org/badges/version/ridge)](https://cran.r-project.org/package=ridge)
-[![CRAN Downloads](http://cranlogs.r-pkg.org/badges/ridge)](https://cran.r-project.org/package=ridge)
+[![CRAN Version](https://www.r-pkg.org/badges/version/ridge)](https://cran.r-project.org/package=ridge)
+[![CRAN Downloads](https://cranlogs.r-pkg.org/badges/ridge)](https://cran.r-project.org/package=ridge)
 
 
 # ridge: Ridge Regression with automatic selection of the penalty parameter 
@@ -30,7 +30,7 @@ Cule, Erika, and Maria De Iorio. "Ridge regression in prediction problems: autom
 
 
 ### Version
-**2.5**
+**2.6**
 
 ### License
 GPL-2

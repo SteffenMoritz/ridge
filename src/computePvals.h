@@ -6,7 +6,6 @@
 */
 
 /* includes */
-
 #include "depends.h"
 #ifdef HAVE_GSL_HEADER
 

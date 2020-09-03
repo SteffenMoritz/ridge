@@ -1,3 +1,9 @@
+## Changes Version 2.6 -  Steffen Moritz
+
+  * Readme update
+
+  * Fixes to pass CRAN checks
+
 ## Changes Version 2.5 -  Dan Frankowski
 
   * Fix predict bug with factor variables

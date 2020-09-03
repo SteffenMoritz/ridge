@@ -1,6 +1,5 @@
 
 /* Header file for ridgeRegressionFunctions.c */
-
 #include "depends.h"
 #ifdef HAVE_GSL_HEADER
 

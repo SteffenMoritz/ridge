@@ -1,4 +1,5 @@
 /* Pre-requisites for the package regression */
+#include <stdlib.h>
 #include "config.h"
 
 #ifdef HAVE_GSL_HEADER
