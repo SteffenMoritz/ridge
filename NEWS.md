@@ -1,3 +1,8 @@
+## Changes Version 2.7 -  Steffen Moritz
+
+  * Fixes to autoconfig, configure
+
+
 ## Changes Version 2.6 -  Steffen Moritz
 
   * Readme update

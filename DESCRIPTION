@@ -2,8 +2,8 @@ Package: ridge
 Title: Ridge Regression with Automatic Selection of the Penalty Parameter
 Description: Linear and logistic ridge regression functions. Additionally includes special functions for 
             genome-wide single-nucleotide polymorphism (SNP) data.
-Version: 2.6
-Date: 2020-09-02
+Version: 2.7
+Date: 2020-09-04
 Authors@R: 
   c(
   person("Steffen", "Moritz", email="steffen.moritz10@gmail.com", role=c("aut", "cre"), comment = c(ORCID = "0000-0002-0085-1804")),
