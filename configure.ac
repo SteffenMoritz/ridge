@@ -2,6 +2,16 @@ AC_INIT(ridge, version-2.7, steffen.moritz10@gmail.com, ridge_2.7.tar.gz, http:/
 AC_CONFIG_HEADER([src/config.h])
 #include <stdlib.h>
 
+: ${R_HOME=`R RHOME`}
+if test -z "${R_HOME}"; then
+  echo "could not determine R_HOME"
+  exit 1
+fi
+CC=`"${R_HOME}/bin/R" CMD config CC`
+CFLAGS=`"${R_HOME}/bin/R" CMD config CFLAGS`
+CPPFLAGS=`"${R_HOME}/bin/R" CMD config CPPFLAGS`
+
+
 dnl Set the variable HAVE_GSL to TRUE
 HAVE_GSL=TRUE
 dnl Following lines kindly supplied by Dirk Eddelbuettel
