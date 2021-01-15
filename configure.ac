@@ -1,4 +1,4 @@
-AC_INIT(ridge, version-2.8, steffen.moritz10@gmail.com, ridge_2.7.tar.gz, http://cran.r-project.org/web/packages/ridge)
+AC_INIT(ridge, version-2.8, steffen.moritz10@gmail.com, ridge_2.8.tar.gz, http://cran.r-project.org/web/packages/ridge)
 AC_CONFIG_HEADER([src/config.h])
 #include <stdlib.h>
 
