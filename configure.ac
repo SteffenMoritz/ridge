@@ -1,4 +1,4 @@
-AC_INIT(ridge, version-2.7, steffen.moritz10@gmail.com, ridge_2.7.tar.gz, http://cran.r-project.org/web/packages/ridge)
+AC_INIT(ridge, version-2.8, steffen.moritz10@gmail.com, ridge_2.7.tar.gz, http://cran.r-project.org/web/packages/ridge)
 AC_CONFIG_HEADER([src/config.h])
 #include <stdlib.h>
 
@@ -15,7 +15,6 @@ CPPFLAGS=`"${R_HOME}/bin/R" CMD config CPPFLAGS`
 dnl Set the variable HAVE_GSL to TRUE
 HAVE_GSL=TRUE
 dnl Following lines kindly supplied by Dirk Eddelbuettel
-dnl (Taken from R package gsl)
 dnl Use gsl-config to find arguments for compiler and linker flags
 dnl Check for non-standard programs: gsl-config(1)
 AC_PATH_PROG([GSL_CONFIG], [gsl-config])
@@ -24,6 +23,8 @@ if test "${GSL_CONFIG}" != ""; then
 dnl Use gsl-config for header and linker arguments of GSL 
     GSL_CFLAGS=`${GSL_CONFIG} --cflags`
     GSL_LIBS=`${GSL_CONFIG} --libs`
+    CFLAGS="$CFLAGS $GSL_CFLAGS"
+    CPPFLAGS="$CPPFLAGS $GSL_CPPFLAGS"
 dnl else set HAVE_GSL to FALSE and print warnings
 else	
     AC_MSG_WARN([gsl-config not found, is GSL installed?])
@@ -80,10 +81,7 @@ AC_OUTPUT
 
 if test "${HAVE_GSL}" = TRUE; then
 dnl Check whether libopenblas is available
-AC_CHECK_LIB(openblas, 
-       	gettimeofday, 
-	HAVE_OPENBLAS=TRUE,
-	HAVE_OPENBLAS=FALSE)
+AC_CHECK_LIB(openblas, $sgemm, [HAVE_OPENBLAS=TRUE;HAVE_OPENBLAS=FALSE])
 dnl If openblas is available
 if test "${HAVE_OPENBLAS}" = TRUE; then
    GSL_CBLAS_LIB=-lopenblas

@@ -1,3 +1,8 @@
+## Changes Version 2.8 -  Steffen Moritz
+
+  * Another fix to configure.ac
+
+
 ## Changes Version 2.7 -  Steffen Moritz
 
   * Fixes to autoconfig, configure
