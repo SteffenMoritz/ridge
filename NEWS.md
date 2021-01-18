@@ -1,3 +1,8 @@
+## Changes Version 2.9 -  Steffen Moritz
+
+  * configure.ac problem wasn't completely fixed trying another fix
+
+
 ## Changes Version 2.8 -  Steffen Moritz
 
   * Another fix to configure.ac
