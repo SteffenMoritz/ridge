@@ -1,7 +1,7 @@
 
-AC_INIT(ridge, version-2.9, steffen.moritz10@gmail.com, ridge_2.9.tar.gz, http://cran.r-project.org/web/packages/ridge)
+AC_INIT([ridge],[version-3.0],[steffen.moritz10@gmail.com],[ridge_3.0.tar.gz],[http://cran.r-project.org/web/packages/ridge])
 
-AC_CONFIG_HEADER([src/config.h])
+AC_CONFIG_HEADERS([src/config.h])
 
 
 : ${R_HOME=`R RHOME`}
@@ -65,5 +65,6 @@ dnl Now substitute these variables in src/Makevars.in to create src/Makevars
 if test "${HAVE_GSL}" = TRUE; then
       AC_SUBST(GSL_CFLAGS) 
       AC_SUBST(GSL_LIBS)
-      AC_OUTPUT(src/Makevars)
+      AC_CONFIG_FILES([src/Makevars])
+AC_OUTPUT
 fi
