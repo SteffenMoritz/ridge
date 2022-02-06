@@ -24,9 +24,10 @@ jobs:
         config:
           - {os: macOS-latest,   r: 'release'}
 
-          - {os: windows-latest, r: 'release'}
+         # Need to figure out how to install gsl for windows
+         # - {os: windows-latest, r: 'release'}
           # Use 3.6 to trigger usage of RTools35
-          - {os: windows-latest, r: '3.6'}
+         # - {os: windows-latest, r: '3.6'}
 
           # Use older ubuntu to maximise backward compatibility
           - {os: ubuntu-18.04,   r: 'devel', http-user-agent: 'release'}
@@ -51,11 +52,17 @@ jobs:
           http-user-agent: ${{ matrix.config.http-user-agent }}
           use-public-rspm: true
 
-      - name: Install system dependencies
+      - name: Install system dependencies macOS
         if: runner.os == 'macOS'
         run: |
           brew update
           brew install gsl
+          
+      - name: Install system dependencies Linux
+        if: runner.os == 'Linux'
+        run: |
+          apt-get update -y
+          apt-get install -y libgsl-dev 
           
       - uses: r-lib/actions/setup-r-dependencies@v1
         with:
