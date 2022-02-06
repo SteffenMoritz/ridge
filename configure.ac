@@ -47,7 +47,6 @@ fi
 dnl Substitute HAVE_GSL in the functions R/l*Genotypes*.R.in 
 AC_SUBST(HAVE_GSL)
 AC_CONFIG_FILES([R/l*Genotypes*.R])
-AC_OUTPUT
 
 if test "${HAVE_GSL}" = TRUE; then
 dnl Check whether libopenblas is available
