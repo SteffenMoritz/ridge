@@ -1,5 +1,12 @@
 
-## Changes Version 2.7 - 3.0 -  Steffen Moritz
+## Changes Version 3.1 -  Steffen Moritz
+
+  * Fixes to remain on CRAN
+  
+  * GitHub Actions as CI Tool 
+
+
+## Changes Version 2.7 until 3.0 -  Steffen Moritz
 
   * Fixes related to autoconf (needed for passing new CRAN checks)
 

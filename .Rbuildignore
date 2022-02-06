@@ -8,3 +8,5 @@ Icon
 ^cran-comments\.md$
 ^dev_hints.md$
 ^.*\.cache$
+^codecov\.yml$
+^\.github$
