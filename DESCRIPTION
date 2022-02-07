@@ -4,7 +4,7 @@ Description: Linear and logistic ridge regression functions. Additionally includ
             genome-wide single-nucleotide polymorphism (SNP) data. More details can be found in
             <doi: 10.1002/gepi.21750> and <doi: 10.1186/1471-2105-12-372>.
 Version: 3.1
-Date: 2022-02-06
+Date: 2022-02-07
 Authors@R: 
   c(
   person("Steffen", "Moritz", email="steffen.moritz10@gmail.com", role=c("aut", "cre"), comment = c(ORCID = "0000-0002-0085-1804")),
