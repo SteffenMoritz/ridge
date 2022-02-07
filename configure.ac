@@ -1,5 +1,5 @@
 
-AC_INIT([ridge],[version-3.0],[steffen.moritz10@gmail.com],[ridge_3.0.tar.gz],[http://cran.r-project.org/web/packages/ridge])
+AC_INIT([ridge],[version-3.1],[steffen.moritz10@gmail.com],[ridge_3.1.tar.gz],[http://cran.r-project.org/web/packages/ridge])
 
 AC_CONFIG_HEADERS([src/config.h])
 

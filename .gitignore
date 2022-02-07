@@ -19,3 +19,4 @@ Icon
 config.log
 config.status
 src/Makevars
+^.*\.cache$
