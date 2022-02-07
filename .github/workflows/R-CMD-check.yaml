@@ -69,3 +69,10 @@ jobs:
           extra-packages: rcmdcheck
 
       - uses: r-lib/actions/check-r-package@v1
+      
+      - name: Show install_out
+        run: |
+           rcmdcheck::rcmdcheck()$install_out
+        shell: Rscript {0}
+        with:
+          extra-packages: rcmdcheck
