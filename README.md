@@ -1,10 +1,11 @@
 <img src="man/figures/ridge.png" align="right" width="150" height="150" alt="ridge Logo" />
 
-
+<!-- badges: start -->
 [![Project Status: Active The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
-[![Build Status](https://travis-ci.org/SteffenMoritz/ridge.svg?branch=master)](https://travis-ci.org/SteffenMoritz/ridge)
+[![R-CMD-check](https://github.com/SteffenMoritz/ridge/workflows/R-CMD-check/badge.svg)](https://github.com/SteffenMoritz/ridge/actions)
 [![CRAN Version](https://www.r-pkg.org/badges/version/ridge)](https://cran.r-project.org/package=ridge)
 [![CRAN Downloads](https://cranlogs.r-pkg.org/badges/ridge)](https://cran.r-project.org/package=ridge)
+  <!-- badges: end -->
 
 
 # ridge: Ridge Regression with automatic selection of the penalty parameter 
