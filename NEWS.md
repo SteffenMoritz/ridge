@@ -1,4 +1,12 @@
 
+## Changes Version 3.2 -  Steffen Moritz
+
+  * Fixed issue with predict() function:
+    Wrong results, when predicting the training data without newdata argument.
+    When supplying them via newdata, everything seemed fine.
+    (https://github.com/SteffenMoritz/ridge/issues/16)
+    Thanks to Mekala Sundaram for reporting the issue.
+
 ## Changes Version 3.1 -  Steffen Moritz
 
   * Fixes to remain on CRAN

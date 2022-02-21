@@ -17,11 +17,11 @@ predict.ridgeLogistic <- function (object, newdata = NULL, type = c("link", "res
   type <- match.arg(type) ## Match the type argument
   na.act <- object$na.action ## Get the na.action statement
   object$na.action <- NULL ## Set object$na.action to NULL
+  
   if (missing(newdata) || is.null(newdata)) { ## If there is no newdata
-    mm <- X <- model.frame(object)
-    mmDone <- TRUE
-    offset <- object$offset
-  } else { ## Else if new data is provided
+    newdata <- object$model_frame
+  } 
+  
     Terms <- delete.response(tt)
     m <- model.frame(Terms, newdata, na.action = na.action, 
                      xlev = object$xlevels)
@@ -34,10 +34,11 @@ predict.ridgeLogistic <- function (object, newdata = NULL, type = c("link", "res
                                                       "variables")[[i + 1]], newdata)
     if (!is.null(object$call$offset)) 
       offset <- offset + eval(object$call$offset, newdata)
-    mmDone <- FALSE
-  }
+
   hasintercept <- attr(tt, "intercept")
+  
   ll <- attr(tt, "term.labels")
+  
   if(hasintercept)
     mm <- cbind(1, X[,ll])
   else
@@ -52,5 +53,6 @@ predict.ridgeLogistic <- function (object, newdata = NULL, type = c("link", "res
   expXB <- exp(XB)
   p <- expXB / (1 + expXB)
   pred <- switch(type, link = XB, response = p)
+  
   pred
 }

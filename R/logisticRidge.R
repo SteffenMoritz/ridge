@@ -46,6 +46,7 @@ logisticRidge <- function(formula, data, lambda = "automatic",
     m[[1L]] <- as.name("model.frame")
     m <- eval.parent(m)
     Terms <- attr(m, "terms")
+    
     ## Extract the response
     Y <- model.response(m)
     ## Construct the design matrix
@@ -171,7 +172,7 @@ logisticRidge <- function(formula, data, lambda = "automatic",
       }
     ##
     colnames(df) <- c("model", "variance")
-    res <- list(automatic = automatic, call = cl, coef = cbind(drop(coef)), df = df, Inter = Inter, isScaled = isScaled, lambda = lambda, scales = Xscale, terms = Terms,  x = X, xm = Xm, y = Y)
+    res <- list(automatic = automatic, call = cl, coef = cbind(drop(coef)), df = df, Inter = Inter, isScaled = isScaled, lambda = lambda, scales = Xscale, terms = Terms,  x = X, xm = Xm, y = Y, model_frame = m)
     ##
     if(!is.null(nPCs))
       {

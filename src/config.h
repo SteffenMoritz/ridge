@@ -41,16 +41,16 @@
 #define PACKAGE_NAME "ridge"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "ridge version-3.1"
+#define PACKAGE_STRING "ridge version-3.2"
 
 /* Define to the one symbol short name of this package. */
-#define PACKAGE_TARNAME "ridge_3.1.tar.gz"
+#define PACKAGE_TARNAME "ridge_3.2.tar.gz"
 
 /* Define to the home page for this package. */
 #define PACKAGE_URL "http://cran.r-project.org/web/packages/ridge"
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "version-3.1"
+#define PACKAGE_VERSION "version-3.2"
 
 /* Define to 1 if all of the C90 standard headers exist (not just the ones
    required in a freestanding environment). This macro is provided for
