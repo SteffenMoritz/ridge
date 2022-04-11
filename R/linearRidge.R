@@ -44,7 +44,6 @@ linearRidge <- function(formula, data, lambda = "automatic",
       }
     m$model <- m$allLambdas <- m$nPCs <- m$... <- m$lambda <- m$scaling <- NULL
     m[[1L]] <- as.name("model.frame")
-    print(m)
     m <- eval.parent(m)
     Terms <- attr(m, "terms")
 

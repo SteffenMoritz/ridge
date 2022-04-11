@@ -1,3 +1,6 @@
+## Changes Version 3.3 -  Steffen Moritz
+
+  * Fixed small bug with a unwanted print statement in linearRidge
 
 ## Changes Version 3.2 -  Steffen Moritz
 
