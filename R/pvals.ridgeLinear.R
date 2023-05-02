@@ -20,7 +20,7 @@ pvals.ridgeLinear <- function(x, ...)
   V <- svdX$v
   lambda <- x$lambda
   div <- lapply(lambda, function(x) {D2 + x})
-  sig2hat <- apply(rbind(lambda, do.call(cbind, div)), 2, function(x) {as.numeric(crossprod(y - U %*% diag((D2)/(x[-1])) %*% t(U) %*% y)) / (n - sum(D2 * (D2 + 2 * x[1]) / (x[-1]^2)))})
+  sig2hat <- apply(rbind(lambda, do.call(cbind, div)), 2, function(x) {as.numeric(crossprod(y - U %*% (diag((D2)/(x[-1])) %*% (t(U) %*% y)))) / (n - sum(D2 * (D2 + 2 * x[1]) / (x[-1]^2)))})
   varmat <- lapply(div, function(x){V %*% diag(D2 / (x^2)) %*% t(V)})
   varmat <- mapply(function(x, y){x * y}, sig2hat, varmat, SIMPLIFY = FALSE)
   se <- lapply(varmat, function(x){sqrt(diag(x))})
